@@ -21,6 +21,7 @@ const providers = [
   '@adonisjs/redis/providers/RedisProvider',
   '@adonisjs/mail/providers/MailProvider',
   '@adonisjs/framework/providers/ViewProvider',
+  'adonis-acl/providers/AclProvider',
   '@adonisjs/validator/providers/ValidatorProvider'
 
 ]
@@ -36,6 +37,7 @@ const providers = [
 */
 const aceProviders = [
   '@adonisjs/lucid/providers/MigrationsProvider',
+  'adonis-acl/providers/CommandsProvider',
   'adonis-kue/providers/CommandsProvider'
 ]
 
@@ -51,7 +53,10 @@ const aceProviders = [
 |   { Route: 'Adonis/Src/Route' }
 |
 */
-const aliases = {}
+const aliases = {
+  Role: 'Adonis/Acl/Role',
+  Permission: 'Adonis/Acl/Permission'
+}
 
 /*
 |--------------------------------------------------------------------------
